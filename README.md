@@ -33,3 +33,7 @@ The program can be run with
 python3 blast_query.py
 ```
 It will run through the input file and indivdually BLAST the sequences, appending the start and stop results to `output.bed` in the `output` folder.
+
+
+where did the database come from?
+installation instructions for BLASTn
