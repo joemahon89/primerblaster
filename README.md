@@ -4,7 +4,7 @@
 A tool to obtain chromosomal start/stop locations for primers when provided with an input.
 
 
-[Installation](#installation)
+[Installation](#installation)  
 [Mass BLASTing Primers](#mass-blasting-primers)
 
 
@@ -33,4 +33,4 @@ python3 blast_query.py
 ```
 The program will through the input file and indivdually BLAST the sequences, appending the start and stop results to `output.bed` in the `output` folder. If large numbers of primers are being BLASTed at once, the program can be exited and restarted when convenient, as it will compare the input and output and only BLAST the missing ones.
 
-Note: When there is no sequence provided, e.g.`PRIMERNAME,    ` or there are no BLAST results, the primer is skipped and not added to the BED file.
+Note: When there is no sequence provided, (e.g.`PRIMERNAME,    `) or there are no BLAST results, the primer is skipped and not added to the BED file.
