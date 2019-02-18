@@ -1,7 +1,7 @@
 
 # primerblaster
 
-A tool to obtain chromosomal start/stop locations for primers when provided with an input.
+A tool to obtain chromosomal start/stop locations for primers when provided with an input in the form of primer_name, primer_sequence (e.g `2006.123,GCTTACTGAATGAATCTACTCTAATCC`)
 
 
 [Installation](#installation)  
