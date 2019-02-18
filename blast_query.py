@@ -27,11 +27,13 @@ def createlogfile(output_bed_file):
 		with open(output_bed_file, 'w') as file:
 			os.utime(output_bed_file, None)
 
+
 def append_output(output_bed_file, contents):
 	""" Appends a single line to the output log file """
 	with open(output_bed_file, 'a') as file:
 		writer = csv.writer(file, delimiter="\t")
 		writer.writerow(contents)
+
 
 def create_temp_fasta(tempfasta, contents):
 	""" Creates the temporary fasta file required for the BLAST tool to
@@ -94,8 +96,6 @@ def main(config):
 													'-task', 'blastn-short',
 													'-num_threads','8',
 													'-outfmt','7'])
-
-
 				# BLAST tool returns raw text, so decode and extract top
 				# result from output
 				results = results.decode("utf-8")
@@ -123,11 +123,3 @@ if __name__ == "__main__":
 	config = getconfig()
 	main(config)
 
-# def find_not_done(logfile, onestodo):
-# 	csvcontents = []
-# 	with open(logfile) as csvfile:
-# 		csv_reader = csv.reader(csvfile, delimiter="\t")
-# 		for row in csv_reader:
-# 			csvcontents[row[0]]=row[1]
-# 	return csvcontents
-		
